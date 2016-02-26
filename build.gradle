@@ -1,0 +1,25 @@
+
+buildscript {
+  repositories {
+    mavenCentral()
+    maven { url "http://dl.bintray.com/twcable/aem" }
+  }
+  dependencies {
+    classpath "com.twcable.gradle:gradle-plugin-scr:1.0.2"
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.twcable.scr'
+
+version = '0.0.1'
+
+dependencies {
+  compile 'org.apache.felix:org.apache.felix.scr.annotations:1.9.12'
+  compile 'org.osgi:org.osgi.compendium:4.2.0'
+  compile 'org.osgi:org.osgi.core:4.2.0'
+  compile 'org.slf4j:slf4j-api:1.7.6'
+}
+repositories {
+  mavenCentral()
+}
